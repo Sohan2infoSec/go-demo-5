@@ -46,7 +46,7 @@ spec:
       cpu: 0.5
     min:
       memory: 10Mi
-      cpu: 0.05
+      cpu: 0.01
     type: Container
 
 ---
