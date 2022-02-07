@@ -10,7 +10,7 @@ spec:
     - mountPath: /var/run/docker.sock
       name: docker-socket
   - name: helm
-    image: vfarcic/helm:2.9.1
+    image: vfarcic/helm:3.0.2
     command: ["cat"]
     tty: true
   - name: kubectl
@@ -18,7 +18,7 @@ spec:
     command: ["cat"]
     tty: true
   - name: golang
-    image: golang:1.9
+    image: golang:1.13
     command: ["cat"]
     tty: true
   volumes:
