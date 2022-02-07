@@ -22,12 +22,12 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        container("golang") {
-          script {
-            currentBuild.displayName = new SimpleDateFormat("yy.MM.dd").format(new Date()) + "-${env.BUILD_NUMBER}"
-          }
-          k8sBuildGolang("go-demo")
-        }
+        // container("golang") {
+        //   script {
+        //     currentBuild.displayName = new SimpleDateFormat("yy.MM.dd").format(new Date()) + "-${env.BUILD_NUMBER}"
+        //   }
+        //   k8sBuildGolang("go-demo")
+        // }
         container("docker") {
           k8sBuildImageBeta(image, false, 'DOCKER_HOST="tcp://172.17.0.1:33333"')
         }
