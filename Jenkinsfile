@@ -59,7 +59,7 @@ pipeline {
       }
       steps {
         container("docker") {
-          k8sPushImage(image, false)
+          k8sPushImage(image, false, 'DOCKER_HOST="tcp://172.17.0.1:33333"')
         }
         container("helm") {
           k8sPushHelm(project, "", cmAddr, true, true)
