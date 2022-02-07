@@ -13,11 +13,11 @@ rbac:
   enabled: true
 resources:
   limits:
-   cpu: 15m
    memory: 15Mi
+   cpu: 15m
   requests:
-   cpu: 50m
    memory: 10Mi
+   cpu: 10m
 dbResources:
   limits:
     memory: 200Mi
