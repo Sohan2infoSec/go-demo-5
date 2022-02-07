@@ -29,7 +29,7 @@ pipeline {
           k8sBuildGolang("go-demo")
         }
         container("docker") {
-          k8sBuildImageBeta(image, false)
+          k8sBuildImageBeta(image, false, 'DOCKER_HOST="tcp://172.17.0.1:33333"')
         }
       }
     }
